@@ -1032,6 +1032,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bouncePower: 8
+  spriteFacesLeft: 0
 --- !u!70 &409538038
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

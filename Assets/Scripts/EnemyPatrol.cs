@@ -86,7 +86,7 @@ public class EnemyPatrol : MonoBehaviour
 
         // 元の絵が「右向き」の場合の設定です。
         // 逆になったら true / false を入れ替えてください
-        spriteRenderer.flipX = (direction < 0);
+        spriteRenderer.flipX = !(direction < 0);
     }
 
     // ------------------------------------------------------------

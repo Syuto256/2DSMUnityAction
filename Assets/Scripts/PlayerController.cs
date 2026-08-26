@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("敵を踏んだときに跳ねる強さ")]
     [SerializeField] private float bouncePower = 8f;
 
+    [Header("見た目")]
+    [Tooltip("元の絵が左向きならチェックを入れる")]
+    [SerializeField] private bool spriteFacesLeft = false;
+
     // --- 他のスクリプトから状態を知りたいとき用 ---
     public bool IsGround => isGround;
 
@@ -140,11 +144,11 @@ public class PlayerController : MonoBehaviour
 
         if (inputX > 0f)
         {
-            spriteRenderer.flipX = false; // 右向き
+            spriteRenderer.flipX = spriteFacesLeft;
         }
         else if (inputX < 0f)
         {
-            spriteRenderer.flipX = true;  // 左向き
+            spriteRenderer.flipX = !spriteFacesLeft;
         }
         // inputX が 0 のときは何もしない（止まったら向きを保つ）
     }
