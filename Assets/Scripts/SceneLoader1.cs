@@ -31,6 +31,9 @@ public static class SceneLoader
 
     public static void LoadGame()
     {
+        // ゲームを始めるときはスコアを 0 に戻す
+        // （リトライのときも通るので、ここに書けば1箇所で済みます）
+        ScoreManager.ResetScore();
         Load(GameScene);
     }
 
